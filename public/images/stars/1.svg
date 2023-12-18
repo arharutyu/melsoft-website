@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="40" zoomAndPan="magnify" viewBox="0 0 30 30.000001" height="40" preserveAspectRatio="xMidYMid meet" version="1.0">
+<defs>
+ <style>
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+
+        @keyframes move {
+            0% {
+                transform: translateX(0) translateY(0);
+            }
+            50% {
+                transform: translateX(20px) translateY(20px);
+            }
+            100% {
+                transform: translateX(0) translateY(0);
+            }
+        }
+
+        svg {
+            animation: spin 10s linear infinite, move 5s ease-in-out infinite;
+        }
+    </style>
+  <clipPath id="7d7cc8d91f">
+    <path d="M 0.484375 0 L 29.515625 0 L 29.515625 29.03125 L 0.484375 29.03125 Z M 0.484375 0 " clip-rule="nonzero"/>
+  </clipPath>
+</defs>
+<g clip-path="url(#7d7cc8d91f)">
+<path fill="#ffffff" d="M 0.484375 0 L 29.515625 0 L 29.515625 29.03125 L 0.484375 29.03125 Z M 0.484375 0 " fill-opacity="1" fill-rule="nonzero"/>
+<path fill="#ffffff" d="M 0.484375 0 L 29.515625 0 L 29.515625 29.03125 L 0.484375 29.03125 Z M 0.484375 0 " fill-opacity="1" fill-rule="nonzero"/>
+<path fill="#f1f2f2" d="M 15 0 C 13.585938 11.953125 12.4375 13.101562 0.484375 14.515625 C 0.507812 14.519531 0.53125 14.523438 0.558594 14.523438 C 12.441406 15.9375 13.589844 17.101562 15 29.03125 C 16.414062 17.078125 17.5625 15.929688 29.515625 14.515625 C 17.5625 13.101562 16.414062 11.953125 15 0 Z M 15 0 " fill-opacity="1" fill-rule="nonzero"/>
+</g>
+</svg>
