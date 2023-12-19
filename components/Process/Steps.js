@@ -6,7 +6,7 @@ const Steps = () => {
       <div className="row align-items-center">
         <div className="col-lg-6 services-details">
           <div className="services-details-desc">
-            <timeline>
+          <div className="timeline">
               <div>
                 <h3>Step 1: Discovery Chat</h3>
                 <p>
@@ -66,7 +66,7 @@ const Steps = () => {
                   first 6 months.
                 </p>
               </div>
-            </timeline>
+            </div>
           </div>
         </div>
 
