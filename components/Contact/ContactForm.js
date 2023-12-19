@@ -157,13 +157,13 @@ const ContactForm = () => {
                   </div>
 
                   <div className="col-lg-12 col-sm-12">
-                    <button type="submit" className="btn btn-primary">
-                      Send Message
-                    </button>
                     <ReCAPTCHA
                       sitekey="6LcdGDkpAAAAAGzJLE3--7SDKfSeKqT9PFNZ9aGo"
                       onChange={handleRecaptchaChange}
                     />
+                    <button type="submit" className="btn btn-primary">
+                      Send Message
+                    </button>
                   </div>
                 </div>
               </form>
