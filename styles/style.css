@@ -381,7 +381,7 @@ timeline {
   margin: auto;
 }
 
-timeline > p {
+timeline > div {
   font-size: 1em;
   line-height: 1.75em;
   border-top: 3px solid;
@@ -397,7 +397,7 @@ timeline > p {
 }
 
 /* numbers */
-timeline > p::before {
+timeline > div::before {
   content: counter(section);
   position: absolute;
   border-radius: 50%;
@@ -412,36 +412,36 @@ timeline > p::before {
 }
 
 /* odd number borders */
-timeline > p:nth-child(odd) {
+timeline > div:nth-child(odd) {
   border-right: 3px solid;
   padding-left: 0;
   text-align: right;
 }
 
-timeline > p:nth-child(odd)::before {
+timeline > div:nth-child(odd)::before {
   left: 100%;
   margin-left: -20px;
 }
 
 /* even number borders */
-timeline > p:nth-child(even) {
+timeline > div:nth-child(even) {
   border-left: 3px solid;
   padding-right: 0;
 }
 
-timeline > p:nth-child(even)::before {
+timeline > div:nth-child(even)::before {
   right: 100%;
   margin-right: -20px;
 }
 
 /* handle first and last */
-timeline > p:first-child {
+timeline > div:first-child {
   border-top: 0;
   border-top-right-radius: 0;
   border-top-left-radius: 0;
 }
 
-timeline > p:last-child {
+timeline > div:last-child {
   border-bottom-right-radius: 0;
   border-bottom-left-radius: 0;
 }
