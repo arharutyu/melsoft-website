@@ -1,32 +1,16 @@
 /*
-@File: StartP Template Styles
-
-* This file contains the styling for the actual template, this
-is the file you need to edit to change the look of the
-template.
-
-This files table contents are outlined below>>>>>
-
-*******************************************
-*******************************************
-
-==== INDEX PAGE CSS
 
 ** - Default CSS
-** - Preloader CSS
+** - Our Process CSS
 ** - Navbar CSS
 ** - Main Banner CSS
 ** - Boxes CSS
-** - About CSS
-** - Why Choose Us CSS
 ** - Services CSS
 ** - Services Details CSS
 ** - Features CSS
-** - Features Details CSS
+** - Portfolio CSS
 ** - Ready To Talk CSS
 ** - Page Title CSS
-** - FAQ CSS
-** - Pagination CSS
 ** - Contact CSS
 ** - Coming Soon CSS
 ** - 404 Error CSS
@@ -191,20 +175,6 @@ textarea.form-control {
     height: auto;
 }
 
-// swiper-pagination
-.swiper-pagination {
-    position: initial;
-    .swiper-pagination-bullet {
-        background-color: #d6d6d6;
-        opacity: 1;
-        width: 12px;
-        height: 12px;
-        &.swiper-pagination-bullet-active, &:hover {
-            background-color: $main-color;
-        }
-    }
-}
-
 .small-logo {
     max-width: 80px;
     padding: 10px;
@@ -364,46 +334,6 @@ textarea.form-control {
     }
 }
 
-/* btn-secondary */
-// .btn {
-//     &.btn-secondary {
-//         text-transform: capitalize;
-//         border-radius: 0;
-//         background-color: $secondary-color;
-//         padding: 13px 30px;
-//         box-shadow: 5px 5px 5px $secondary-color-200;
-//         margin: {
-//             right: 5px;
-//             bottom: 5px;
-//         };
-//         font: {
-//             size: 14px;
-//             weight: 500;
-//         };
-//         &::before {
-//             border-radius: 0;
-//             background: $secondary-color;
-//         }
-//         &::after {
-//             border-radius: 0;
-//             background: $secondary-color;
-//         }
-//         &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, .show>&.dropdown-toggle {
-//             color: $white-color;
-//             background-color: $main-color;
-//             border-color: $main-color;
-//         }
-//         &:not(:disabled):not(.disabled).active:focus, &:not(:disabled):not(.disabled):active:focus, .show>&.dropdown-toggle:focus {
-//             box-shadow: 5px 5px 5px $bg-color;
-//         }
-//         &:focus {
-//             color: $white-color;
-//         }
-//         &:hover, &:focus {
-//             box-shadow: 5px 5px 5px $bg-color;
-//         }
-//     }
-// }
 
 /* Form control */
 .form-group {
@@ -597,42 +527,6 @@ Our Process CSS
     border-bottom-right-radius: 0;
     border-bottom-left-radius: 0;
   }
-
-/*================================================ 
-Preloader CSS
-=================================================*/
-.preloader {
-    position: fixed;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 9999999;
-    background: $main-color;
-
-    .spinner {
-        width: 60px;
-        height: 60px;
-        background-color: $white-color;
-        margin: 0 auto;
-        animation: sk-rotateplane 1.2s infinite ease-in-out;
-        position: absolute;
-        right: 0;
-        left: 0;
-        box-shadow: 0 0 70px 0 rgba(0, 0, 0, 0.4);
-        top: 50%;
-        margin-top: -75px;
-    }
-}
-@keyframes sk-rotateplane {
-    0% { 
-        transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-    } 50% { 
-        transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-    } 100% { 
-        transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-    }
-}
 
 /*================================================
 Navbar CSS
@@ -1440,84 +1334,6 @@ Services CSS
         }
     }
 }
-.single-services-box {
-    position: relative;
-    background: $white-color;
-    padding: {
-        left: 25px;
-        top: 30px;
-        right: 25px;
-        bottom: 30px;
-    }
-    margin-bottom: 30px;
-    border-radius: 5px;
-    transition: $transition;
-
-    h3 {
-        font-size: 18px;
-        margin: {
-            top: 25px;
-            bottom: 15px;
-        }
-    }
-    .icon {
-        text-align: center;
-        width: 55px;
-        height: 55px;
-        line-height: 55px;
-        background: #cdf1d8;
-        border-radius: 50%;
-        color: $main-color;
-        transition: $transition;
-
-        &.bg-c679e3 {
-            color: $secondary-color;
-            background: #edc3fc;
-        }
-        &.bg-eb6b3d {
-            color: #eb6b3d;
-            background: rgba(235, 107, 61, .3);
-        }
-    }
-    &::before, &::after {
-        content: '';
-        position: absolute;
-        width: 0;
-        height: 4px;
-        background: $main-color;
-        opacity: 0;
-        visibility: hidden;
-        bottom: 0;
-        transition: $transition;
-    }
-    &::before {
-        left: 0;
-    }
-    &::after {
-        right: 0;
-    }
-    &:hover {
-        transform: translateY(-10px);
-        box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
-
-        .icon {
-            background: $main-color;
-            color: $white-color;
-
-            &.bg-c679e3 {
-                background: $secondary-color;
-            }
-            &.bg-eb6b3d {
-                background: #eb6b3d;
-            }
-        }
-        &::after, &::before {
-            opacity: 1;
-            visibility: visible;
-            width: 50%;
-        }
-    }
-}
 
 /*================================================
 Services Details CSS
@@ -1776,98 +1592,6 @@ Ready To Talk CSS
     }
 }
 
-
-/*================================================
-Works CSS
-=================================================*/
-.works-area {
-    position: relative;
-    z-index: 1;
-}
-.single-works {
-    position: relative;
-    margin-bottom: 30px;
-    overflow: hidden;
-      
-    &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        top: 0;
-        width: 100%;
-        height: 100%;
-        background: $gradient-color;
-        transition: $transition;
-        opacity: 0;
-        visibility: hidden;
-    }
-    .icon {
-        position: absolute;
-        border-radius: 50%;
-        top: 0;
-        right: 25px;
-        background: $white-color;
-        width: 45px;
-        text-align: center;
-        height: 45px;
-        line-height: 42px;
-        opacity: 0;
-        transition: $transition;
-        visibility: hidden;
-
-        svg {
-            width: 19px;
-        }
-        &:hover {
-            background: $dark-color;
-            color: $white-color;
-        }
-    }
-    .works-content {
-        position: absolute;
-        bottom: -60px;
-        left: 0;
-        padding: 20px;
-        transition: $transition;
-        opacity: 0;
-        visibility: hidden;
-
-        h3 {
-            font-size: 18px;
-            margin-bottom: 15px;
-            
-            a {
-                color: $white-color;
-                &:hover {
-                    text-decoration: underline;
-                }
-            }
-        }
-        p {
-            color: $white-color;
-        }
-    }
-    &:hover {
-        &::before {
-            opacity: .9;
-            visibility: visible;
-            z-index: 1;
-        }
-        .icon {
-            opacity: 1;
-            visibility: visible;
-            top: 25px;
-            z-index: 5;
-        }
-        .works-content {
-            opacity: 1;
-            visibility: visible;
-            bottom: 0;
-            z-index: 5;
-        }
-    }
-}
-
 /*================================================
 Page Title CSS
 =================================================*/
@@ -1957,10 +1681,6 @@ Contact CSS
             background: $main-color;
         }
     }
-}
-#map {
-    height: 500px;
-    width: 100%;
 }
 .contact-form {
     .invalid-feedback {
@@ -2198,150 +1918,8 @@ Footer CSS
 .footer-area {
     position: relative;
     z-index: 1;
-
-    // .map {
-    //     position: absolute;
-    //     top: 0;
-    //     left: 0;
-    //     right: 0;
-    //     margin: 0 auto;
-    //     text-align: center;
-    //     z-index: -1;
-    //     bottom: 0;
-    //     opacity: .7;
-    // }
-}
-.single-footer-widget {
-    .logo {
-        margin-bottom: 20px;
-
-        a {
-            display: block;
-        }
-    }
-    h3 {
-        font-size: 18px;
-        margin-bottom: 30px;
-    }
-    ul {
-        padding: 0;
-        margin: 0;
-        list-style-type: none;
-
-        &.list {
-            li {
-                margin-bottom: 10px;
-
-                a {
-                    color: $dark-color;
-                    
-                    &:hover {
-                        color: $main-color;
-                        padding-left: 7px;
-                    }
-                }
-                &:last-child {
-                    margin-bottom: 0;
-                }
-            }
-        }
-        &.footer-contact-info {
-            margin-bottom: 20px;
-
-            li {
-                position: relative;
-                color: $dark-color;
-                margin-bottom: 8px;
-                padding-left: 25px;
-
-                svg {
-                    position: absolute;
-                    left: 0;
-                    width: 15px;
-                    height: auto;
-                    top: 2px;
-                }
-                &:last-child {
-                    margin-bottom: 0;
-                }
-                a {
-                    color: $dark-color;
-
-                    &:hover {
-                        color: $main-color;
-                    }
-                }
-            }
-        }
-        &.social-links {
-            li {
-                display: inline-block;
-                margin-right: 8px;
-
-                &:last-child {
-                    margin-right: 0;
-                }
-
-                a {
-                    width: 32px;
-                    text-align: center;
-                    line-height: 29px;
-                    height: 32px;
-                    border: 1px solid $main-color;
-                    border-radius: 50%;
-                    color: $main-color;
-                    
-                    svg {
-                        width: 15px;
-                    }
-                    &.facebook {
-                        border-color: #4267b2;
-                        color: #4267b2;
-
-                        &:hover {
-                            background: #4267b2;
-                            color: $white-color;
-                        }
-                    }
-                    &.twitter {
-                        border-color: #38A1F3;
-                        color: #38A1F3;
-
-                        &:hover {
-                            background: #38A1F3;
-                            color: $white-color;
-                        }
-                    }
-                    &.linkedin {
-                        border-color: #0077B5;
-                        color: #0077B5;
-
-                        &:hover {
-                            background: #0077B5;
-                            color: $white-color;
-                        }
-                    }
-                    &.instagram {
-                        border-color: #231F20;
-                        color: #231F20;
-
-                        &:hover {
-                            background: #231F20;
-                            color: $white-color;
-                        }
-                    }
-                    &:hover {
-                        background: $main-color;
-                        color: $white-color;
-                    }
-                }
-            }
-        }
-    }
 }
 .copyright-area {
-    // margin-top: 10px;
-    // border-top: 1px solid #d8ebfd;
     text-align: center;
     padding: {
         top: 25px;
@@ -2382,4 +1960,3 @@ Go Top CSS
         margin-bottom: 15px;
     }
 }
-
