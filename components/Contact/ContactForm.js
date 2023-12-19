@@ -42,31 +42,35 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    try {
-        // Verify reCAPTCHA status
-        const recaptchaVerificationResponse = await axios.post("/api/recaptcha", { recaptchaResponse });
-        if (recaptchaVerificationResponse.data.success) {
-          // reCAPTCHA verification successful, proceed with form submission
-          const url = `/api/contact`;
-          const { name, email, number, subject, text } = contact;
-          const payload = { name, email, number, subject, text };
-    
-          const response = await axios.post(url, payload, {
-            headers: {
-              "Content-Type": "application/json",
-              "Access-Control-Allow-Origin": "*",
-            },
-          });
-    
-          setContact(INITIAL_STATE);
-          alertContent();
-        } else {
-          // reCAPTCHA verification failed
-          alert("reCAPTCHA verification failed. Please try again.");
-        }
-      } catch (error) {
-        alert("Error submitting form. Please try again.");
-      }
+    if (!recaptchaResponse) {
+        alert("You must complete the reCaptcha to submit an enquiry.");
+    } else {
+        try {
+            // Verify reCAPTCHA status
+            const recaptchaVerificationResponse = await axios.post("/api/recaptcha", { recaptchaResponse });
+            if (recaptchaVerificationResponse.data.success) {
+              // reCAPTCHA verification successful, proceed with form submission
+              const url = `/api/contact`;
+              const { name, email, number, subject, text } = contact;
+              const payload = { name, email, number, subject, text };
+        
+              const response = await axios.post(url, payload, {
+                headers: {
+                  "Content-Type": "application/json",
+                  "Access-Control-Allow-Origin": "*",
+                },
+              });
+        
+              setContact(INITIAL_STATE);
+              alertContent();
+            } else {
+              // reCAPTCHA verification failed
+              alert("reCAPTCHA verification failed. Please try again.");
+            }
+          } catch (error) {
+            alert("Error submitting form. Please try again.");
+          }
+    }
   };
 
   return (
