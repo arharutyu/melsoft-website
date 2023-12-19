@@ -8,8 +8,8 @@ import baseUrl from '../../utils/baseUrl'
 
 const alertContent = () => {
     MySwal.fire({
-      title: "Congratulations!",
-      text: "Your message was successfully send and will back to you soon",
+      title: "Message sent!",
+      text: "Your message was successfully sent and we will get back to you soon",
       icon: "success",
       timer: 2000,
       timerProgressBar: true,
@@ -58,7 +58,6 @@ const ContactForm = () => {
                     <div className="section-title">
                         <h2>Get In Touch With Us</h2>
                         <div className="bar"></div>
-                        <p>Anything On your Mind. We’ll Be Glad To Assist You!</p>
                     </div>
 
                     <div className="row align-items-center">
