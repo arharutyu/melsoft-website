@@ -33,13 +33,11 @@ const ContactForm = () => {
 
   const handleRecaptchaChange = (value) => {
     setRecaptchaResponse(value)
-    console.log("reCAPTCHA value:", value);
   };
 
   const handleChange = (e) => {
     const { name, value } = e.target;
     setContact((prevState) => ({ ...prevState, [name]: value }));
-    // console.log(contact)
   };
 
   const handleSubmit = async (e) => {
@@ -47,7 +45,6 @@ const ContactForm = () => {
     try {
         // Verify reCAPTCHA status
         const recaptchaVerificationResponse = await axios.post("/api/recaptcha", { recaptchaResponse });
-        console.log(recaptchaVerificationResponse)
         if (recaptchaVerificationResponse.data.success) {
           // reCAPTCHA verification successful, proceed with form submission
           const url = `/api/contact`;
@@ -61,7 +58,6 @@ const ContactForm = () => {
             },
           });
     
-          console.log(response);
           setContact(INITIAL_STATE);
           alertContent();
         } else {
@@ -69,7 +65,6 @@ const ContactForm = () => {
           alert("reCAPTCHA verification failed. Please try again.");
         }
       } catch (error) {
-        console.log(error);
         alert("Error submitting form. Please try again.");
       }
   };

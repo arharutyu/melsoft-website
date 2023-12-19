@@ -9,8 +9,6 @@ const Navbar = () => {
 
   useEffect(() => {
     setCurrentPath(router.pathname);
-    console.log("router.pathname", router.pathname);
-    console.log("currentPath", currentPath);
   }, [router.pathname]);
 
   const [menu, setMenu] = React.useState(true);
@@ -19,7 +17,6 @@ const Navbar = () => {
     // setCurrentPath(router.asPath)
     let elementId = document.getElementById("header");
     elementId.classList.add("is-sticky");
-    console.log('here')
     setMenu(!menu);
   };
 
