@@ -1,5 +1,3 @@
-'use server'
-
 import nodemailer from "nodemailer";
 import sgTransport from "nodemailer-sendgrid-transport";
 
