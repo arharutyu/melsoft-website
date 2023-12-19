@@ -205,6 +205,12 @@ textarea.form-control {
     }
 }
 
+.small-logo {
+    max-width: 80px;
+    padding: 10px;
+    margin-top: 40px;
+}
+
 /* btn btn-primary */
 .btn-primary {
     color: $white-color;
@@ -436,6 +442,83 @@ label {
     margin: auto;
     padding-bottom: 20px;
 }
+
+/*================================================ 
+Our Process CSS
+=================================================*/
+timeline {
+    min-width: 300px;
+    max-width: 500px;
+    margin: auto;
+  }
+  
+  timeline > p {
+    font-size: 1em;
+    line-height: 1.75em;
+    border-top: 3px solid;
+    border-image: $gradient-color2;
+    // border-image: linear-gradient(to right, #743ad5 0%, $main-color-600 100%);
+    border-image-slice: 1;
+    border-width: 3px;
+    margin: 0;
+    padding: 40px;
+    counter-increment: section;
+    position: relative;
+    color: black;
+  }
+  
+  /* numbers */
+  timeline > p::before {
+    content: counter(section);
+    position: absolute;
+    border-radius: 50%;
+    padding: 10px;
+    height: 2em;
+    width: 2em;
+    background-color: black;
+    text-align: center;
+    line-height: 1em;
+    color: white;
+    font-size: 1.25em;
+
+    
+  }
+  
+  /* odd number borders */
+  timeline > p:nth-child(odd) {
+    border-right: 3px solid;
+    padding-left: 0;
+    text-align: right;
+  }
+  
+  timeline > p:nth-child(odd)::before {
+    left: 100%;
+    margin-left: -20px;
+  }
+  
+  /* even number borders */
+  timeline > p:nth-child(even) {
+    border-left: 3px solid;
+    padding-right: 0;
+  }
+  
+  timeline > p:nth-child(even)::before {
+    right: 100%;
+    margin-right: -20px;
+  }
+  
+  /* handle first and last */
+  timeline > p:first-child {
+    border-top: 0;
+    border-top-right-radius: 0;
+    border-top-left-radius: 0;
+  }
+  
+  timeline > p:last-child {
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+
 /*================================================ 
 Preloader CSS
 =================================================*/
