@@ -29,10 +29,10 @@ const INITIAL_STATE = {
 
 const ContactForm = () => {
   const [contact, setContact] = useState(INITIAL_STATE);
-  const [captcha, setCaptcha] = useState(false)
+  const [recaptchaResponse, setRecaptchaResponse] = useState(false)
 
   const handleRecaptchaChange = (value) => {
-    setCaptcha(value)
+    setRecaptchaResponse(value)
     console.log("reCAPTCHA value:", value);
   };
 
@@ -46,7 +46,7 @@ const ContactForm = () => {
     e.preventDefault();
     try {
         // Verify reCAPTCHA status
-        const recaptchaVerificationResponse = await axios.post("/api/recaptcha", { captcha });
+        const recaptchaVerificationResponse = await axios.post("/api/recaptcha", { recaptchaResponse });
         console.log(recaptchaVerificationResponse)
         if (recaptchaVerificationResponse.data.success) {
           // reCAPTCHA verification successful, proceed with form submission
