@@ -161,7 +161,7 @@ const ContactForm = () => {
                       Send Message
                     </button>
                     <ReCAPTCHA
-                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_KEY}
+                      sitekey="6LcdGDkpAAAAAGzJLE3--7SDKfSeKqT9PFNZ9aGo"
                       onChange={handleRecaptchaChange}
                     />
                   </div>
