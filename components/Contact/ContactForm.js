@@ -5,6 +5,7 @@ import Swal from "sweetalert2";
 import withReactContent from "sweetalert2-react-content";
 const MySwal = withReactContent(Swal);
 import baseUrl from "../../utils/baseUrl";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const alertContent = () => {
   MySwal.fire({
@@ -29,6 +30,11 @@ const INITIAL_STATE = {
 const ContactForm = () => {
   const [contact, setContact] = useState(INITIAL_STATE);
 
+  const handleRecaptchaChange = (value) => {
+    // Handle the reCAPTCHA response here
+    console.log("reCAPTCHA value:", value);
+  };
+
   const handleChange = (e) => {
     const { name, value } = e.target;
     setContact((prevState) => ({ ...prevState, [name]: value }));
@@ -43,8 +49,8 @@ const ContactForm = () => {
       const payload = { name, email, number, subject, text };
       const response = await axios.post(url, payload, {
         headers: {
-          'Content-Type': 'application/json',
-          'Access-Control-Allow-Origin': '*',
+          "Content-Type": "application/json",
+          "Access-Control-Allow-Origin": "*",
         },
       });
       console.log(response);
@@ -154,6 +160,10 @@ const ContactForm = () => {
                     <button type="submit" className="btn btn-primary">
                       Send Message
                     </button>
+                    <ReCAPTCHA
+                      sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_KEY}
+                      onChange={handleRecaptchaChange}
+                    />
                   </div>
                 </div>
               </form>
