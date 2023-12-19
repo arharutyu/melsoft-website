@@ -39,6 +39,17 @@ const OurServices = () => {
                             </div>
                             </Link>
                         </div>
+                        <div>
+                            <img src="/images/tech-logos/aws-2.svg" alt="AWS Logo" className="small-logo" />
+                            <img src="/images/tech-logos/azure-2.svg" alt="Azure Logo" className="small-logo" />
+                            <img src="/images/tech-logos/google-cloud-1.svg" alt="GCP Logo" className="small-logo" />
+                            <img src="/images/tech-logos/css-3.svg" alt="CSS Logo" className="small-logo" />
+                            <img src="/images/tech-logos/html-1.svg" alt="HTML Logo" className="small-logo" />
+                            <img src="/images/tech-logos/logo-javascript.svg" alt="JS Logo" className="small-logo" />
+                            <img src="/images/tech-logos/next-js.svg" alt="Next.js Logo" className="small-logo" />
+                            <img src="/images/tech-logos/react-2.svg" alt="React Logo" className="small-logo" />
+                            <img src="/images/tech-logos/wordpress-icon-1.svg" alt="WordPress Logo" className="small-logo" />
+                        </div>
                         </div>
                     </div>
                 </div>
