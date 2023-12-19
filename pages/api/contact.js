@@ -1,3 +1,5 @@
+'use server'
+
 import nodemailer from "nodemailer";
 import sgTransport from "nodemailer-sendgrid-transport";
 
@@ -10,8 +12,7 @@ const transporter = {
 const mailer = nodemailer.createTransport(sgTransport(transporter));
 
 export default async (req, res) => {
-  'use server'
-  
+
   const { name, email, number, subject, text } = req.body;
 
   const data = {
