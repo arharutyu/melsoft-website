@@ -595,7 +595,7 @@ Navbar CSS
 .navbar-toggler .icon-bar {
   width: 35px;
   transition: all 0.3s;
-  background: #221638;
+  background: #e7e6e4;
   height: 4px;
   display: block;
   border-radius: 3px;
@@ -1239,6 +1239,7 @@ Services Details CSS
 
 .services-details-image {
   text-align: center;
+  align-self: start;
 }
 
 /*================================================

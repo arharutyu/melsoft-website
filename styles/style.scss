@@ -703,7 +703,7 @@ Navbar CSS
     .icon-bar {
         width: 35px;
         transition: all 0.3s;
-        background: #221638;
+        background: $secondary-color-800;
         height: 4px;
 		display: block;
 		border-radius: 3px;
@@ -1415,6 +1415,7 @@ Services Details CSS
 }
 .services-details-image {
     text-align: center;
+    align-self: start;
 }
 
 /*================================================

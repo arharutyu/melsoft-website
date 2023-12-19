@@ -8,7 +8,7 @@ const OurServices = () => {
       <div className="boxes-area">
         <div className="container">
           <div className="row">
-            <div className="col-lg-3 col-md-6">
+            <div className="col-6">
               <Link href="/#set-up">
                 <div className="single-box">
                   <div className="icon">
@@ -26,7 +26,7 @@ const OurServices = () => {
               </Link>
             </div>
 
-            <div className="col-lg-3 col-md-6">
+            <div className="col-6 col-">
               <Link href="/#spruik-up">
                 <div className="single-box">
                   <div className="icon">
