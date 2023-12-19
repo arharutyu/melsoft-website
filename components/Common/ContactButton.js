@@ -11,6 +11,9 @@ const ContactButton = () => {
                     <Link href="/contact" className="btn btn-primary">
                         Contact Us
                     </Link>
+                    <Link href="/process" className="btn btn-secondary">
+                        Learn More
+                    </Link>
                 </div>
             </div>
         </>

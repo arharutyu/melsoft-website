@@ -285,46 +285,119 @@ textarea.form-control {
     }
 }
 
-/* btn-secondary */
-.btn {
-    &.btn-secondary {
-        text-transform: capitalize;
-        border-radius: 0;
-        background-color: $secondary-color;
-        padding: 13px 30px;
-        box-shadow: 5px 5px 5px $secondary-color-200;
-        margin: {
-            right: 5px;
-            bottom: 5px;
-        };
-        font: {
-            size: 14px;
-            weight: 500;
-        };
-        &::before {
-            border-radius: 0;
-            background: $secondary-color;
-        }
-        &::after {
-            border-radius: 0;
-            background: $secondary-color;
-        }
-        &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, .show>&.dropdown-toggle {
-            color: $white-color;
-            background-color: $main-color;
-            border-color: $main-color;
-        }
-        &:not(:disabled):not(.disabled).active:focus, &:not(:disabled):not(.disabled):active:focus, .show>&.dropdown-toggle:focus {
-            box-shadow: 5px 5px 5px $bg-color;
-        }
-        &:focus {
-            color: $white-color;
-        }
+.btn-secondary {
+    color: $white-color;
+    background-color: $secondary-color-300;
+    box-shadow: 0 13px 27px 0 rgba(68, 206, 111, .25);
+
+    &:hover, &:focus, &:active {
+        color: $white-color;
+        background: $dark-color;
+        transform: translateY(-5px);
+        box-shadow: 0 13px 27px 0 rgba(198, 121, 227, .25);
+    }
+    &.focus, &:focus {
+        box-shadow: unset;
+    }
+    &:not(:disabled):not(.disabled).active:focus, &:not(:disabled):not(.disabled):active:focus, .show>.btn-secondary.dropdown-toggle:focus {
+        box-shadow: unset;
+    }
+    &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, .show>.btn-secondary.dropdown-toggle {
+        color: $white-color;
+        background: $dark-color;
+        transform: translateY(-5px);
+        box-shadow: 0 13px 27px 0 rgba(198, 121, 227, .25);
+    }
+    &.disabled, &:disabled {
+        color: $white-color;
+        background-color: $main-color;
+        box-shadow: 0 13px 27px 0 rgba(68, 206, 111, .25);
+        opacity: 1;
+
         &:hover, &:focus {
-            box-shadow: 5px 5px 5px $bg-color;
+            background: $dark-color;
+            box-shadow: 0 13px 27px 0 rgba(198, 121, 227, .25);
         }
     }
 }
+.btn {
+    font: {
+        weight: 600;
+        size: 14px;
+    }
+    border: none;
+    padding: 15px 40px;
+    position: relative;
+    border-radius: 4px;
+    z-index: 1;
+    text-transform: uppercase;
+    transition: $transition;
+
+    &::after, &::before {
+        content: '';
+        position: absolute;
+        top: 0;
+        height: 100%;
+        width: 0;
+        transition: $transition;
+        background: $secondary-color;
+        z-index: -1;
+    }
+    &::after {
+        left: 0;
+        border-radius: 4px 0 0 4px;
+    }
+    &::before {
+        right: 0;
+        border-radius: 0 4px 4px 0;
+    }
+    &:hover {
+        &::after, &::before {
+            width: 50%;
+        }
+    }
+}
+
+/* btn-secondary */
+// .btn {
+//     &.btn-secondary {
+//         text-transform: capitalize;
+//         border-radius: 0;
+//         background-color: $secondary-color;
+//         padding: 13px 30px;
+//         box-shadow: 5px 5px 5px $secondary-color-200;
+//         margin: {
+//             right: 5px;
+//             bottom: 5px;
+//         };
+//         font: {
+//             size: 14px;
+//             weight: 500;
+//         };
+//         &::before {
+//             border-radius: 0;
+//             background: $secondary-color;
+//         }
+//         &::after {
+//             border-radius: 0;
+//             background: $secondary-color;
+//         }
+//         &:not(:disabled):not(.disabled).active, &:not(:disabled):not(.disabled):active, .show>&.dropdown-toggle {
+//             color: $white-color;
+//             background-color: $main-color;
+//             border-color: $main-color;
+//         }
+//         &:not(:disabled):not(.disabled).active:focus, &:not(:disabled):not(.disabled):active:focus, .show>&.dropdown-toggle:focus {
+//             box-shadow: 5px 5px 5px $bg-color;
+//         }
+//         &:focus {
+//             color: $white-color;
+//         }
+//         &:hover, &:focus {
+//             box-shadow: 5px 5px 5px $bg-color;
+//         }
+//     }
+// }
 
 /* Form control */
 .form-group {
@@ -1669,7 +1742,18 @@ Ready To Talk CSS
         }
     }
     .btn-primary {
+        margin: 5px;
         background: $main-color;
+        box-shadow: 0 5px 20px 0 rgba(93, 131, 187, 0.25);
+
+        &:hover, &:focus {
+            color: $secondary-color-200;
+            box-shadow: 0 5px 20px 0 rgba(93, 131, 187, 0.25);
+        }
+    }
+    .btn-secondary {
+        margin: 5px;
+        background: $secondary-color-300;
         box-shadow: 0 5px 20px 0 rgba(93, 131, 187, 0.25);
 
         &:hover, &:focus {

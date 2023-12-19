@@ -228,41 +228,74 @@ textarea.form-control {
   width: 50%;
 }
 
-/* btn-secondary */
-.btn.btn-secondary {
-  text-transform: capitalize;
-  border-radius: 0;
-  background-color: #C2C1BB;
-  padding: 13px 30px;
-  box-shadow: 5px 5px 5px #504f49;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  font-size: 14px;
-  font-weight: 500;
+.btn-secondary {
+  color: #ffffff;
+  background-color: #78776d;
+  box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
 }
-.btn.btn-secondary::before {
-  border-radius: 0;
-  background: #C2C1BB;
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+  color: #ffffff;
+  background: #253A59;
+  transform: translateY(-5px);
+  box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 }
-.btn.btn-secondary::after {
-  border-radius: 0;
-  background: #C2C1BB;
+.btn-secondary.focus, .btn-secondary:focus {
+  box-shadow: unset;
 }
-.btn.btn-secondary:not(:disabled):not(.disabled).active, .btn.btn-secondary:not(:disabled):not(.disabled):active, .show > .btn.btn-secondary.dropdown-toggle {
+.btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary .show > .btn-secondary.dropdown-toggle:focus {
+  box-shadow: unset;
+}
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary .show > .btn-secondary.dropdown-toggle {
+  color: #ffffff;
+  background: #253A59;
+  transform: translateY(-5px);
+  box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
+}
+.btn-secondary.disabled, .btn-secondary:disabled {
   color: #ffffff;
   background-color: #416286;
-  border-color: #416286;
+  box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
+  opacity: 1;
 }
-.btn.btn-secondary:not(:disabled):not(.disabled).active:focus, .btn.btn-secondary:not(:disabled):not(.disabled):active:focus, .show > .btn.btn-secondary.dropdown-toggle:focus {
-  box-shadow: 5px 5px 5px #81a1c2;
-}
-.btn.btn-secondary:focus {
-  color: #ffffff;
-}
-.btn.btn-secondary:hover, .btn.btn-secondary:focus {
-  box-shadow: 5px 5px 5px #81a1c2;
+.btn-secondary.disabled:hover, .btn-secondary.disabled:focus, .btn-secondary:disabled:hover, .btn-secondary:disabled:focus {
+  background: #253A59;
+  box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 }
 
+.btn {
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  padding: 15px 40px;
+  position: relative;
+  border-radius: 4px;
+  z-index: 1;
+  text-transform: uppercase;
+  transition: 0.5s;
+}
+.btn::after, .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 0;
+  transition: 0.5s;
+  background: #C2C1BB;
+  z-index: -1;
+}
+.btn::after {
+  left: 0;
+  border-radius: 4px 0 0 4px;
+}
+.btn::before {
+  right: 0;
+  border-radius: 0 4px 4px 0;
+}
+.btn:hover::after, .btn:hover::before {
+  width: 50%;
+}
+
+/* btn-secondary */
 /* Form control */
 .form-group {
   margin-bottom: 18px;
@@ -1471,10 +1504,20 @@ Ready To Talk CSS
   background: #ffffff;
 }
 .ready-to-talk .btn-primary {
+  margin: 5px;
   background: #416286;
   box-shadow: 0 5px 20px 0 rgba(93, 131, 187, 0.25);
 }
 .ready-to-talk .btn-primary:hover, .ready-to-talk .btn-primary:focus {
+  color: #504f49;
+  box-shadow: 0 5px 20px 0 rgba(93, 131, 187, 0.25);
+}
+.ready-to-talk .btn-secondary {
+  margin: 5px;
+  background: #78776d;
+  box-shadow: 0 5px 20px 0 rgba(93, 131, 187, 0.25);
+}
+.ready-to-talk .btn-secondary:hover, .ready-to-talk .btn-secondary:focus {
   color: #504f49;
   box-shadow: 0 5px 20px 0 rgba(93, 131, 187, 0.25);
 }
