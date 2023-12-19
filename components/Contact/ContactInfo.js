@@ -13,27 +13,7 @@ const ContactInfo = () => {
                                     <Icon.Mail />
                                 </div>
                                 <h3>Email</h3>
-                                <p><a href="mailto:info@startp.com">info@melsoft.com.au</a></p>
-                            </div>
-                        </div>
-
-                        {/* <div className="col-lg-4 col-md-6 col-sm-6">
-                            <div className="contact-info-box">
-                                <div className="icon">
-                                    <Icon.MapPin />
-                                </div>
-                                <h3>Visit Here</h3>
-                                <p>27 Division St, New York, NY 10002, United States of America</p>
-                            </div>
-                        </div> */}
-
-                        <div className="col-lg-4 col-md-6 col-sm-6">
-                            <div className="contact-info-box">
-                                <div className="icon">
-                                    <Icon.Phone />
-                                </div>
-                                <h3>Phone</h3>
-                                <p><a href="tel:+1234567890">+123 456 7890</a></p>
+                                <p><a href="mailto:info@melsoft.com.au">info@melsoft.com.au</a></p>
                             </div>
                         </div>
                     </div>
