@@ -37,6 +37,7 @@ const ContactForm = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    console.log(process.env.NEXT_PUBLIC_SENDGRID_API_KEY)
     try {
       const url = `${baseUrl}/api/contact`;
       const { name, email, number, subject, text } = contact;
