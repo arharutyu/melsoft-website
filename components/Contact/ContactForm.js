@@ -29,9 +29,10 @@ const INITIAL_STATE = {
 
 const ContactForm = () => {
   const [contact, setContact] = useState(INITIAL_STATE);
+  const [captcha, setCaptcha] = useState(false)
 
   const handleRecaptchaChange = (value) => {
-    // Handle the reCAPTCHA response here
+    setCaptcha(value)
     console.log("reCAPTCHA value:", value);
   };
 
@@ -44,21 +45,49 @@ const ContactForm = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const url = `/api/contact`;
-      const { name, email, number, subject, text } = contact;
-      const payload = { name, email, number, subject, text };
-      const response = await axios.post(url, payload, {
-        headers: {
-          "Content-Type": "application/json",
-          "Access-Control-Allow-Origin": "*",
-        },
-      });
-      console.log(response);
-      setContact(INITIAL_STATE);
-      alertContent();
-    } catch (error) {
-      console.log(error);
-    }
+        // Verify reCAPTCHA status
+        const recaptchaVerificationResponse = await axios.post("/api/recaptcha", { captcha });
+        console.log(recaptchaVerificationResponse)
+        if (recaptchaVerificationResponse.data.success) {
+          // reCAPTCHA verification successful, proceed with form submission
+          const url = `/api/contact`;
+          const { name, email, number, subject, text } = contact;
+          const payload = { name, email, number, subject, text };
+    
+          const response = await axios.post(url, payload, {
+            headers: {
+              "Content-Type": "application/json",
+              "Access-Control-Allow-Origin": "*",
+            },
+          });
+    
+          console.log(response);
+          setContact(INITIAL_STATE);
+          alert("Form submitted successfully!");
+        } else {
+          // reCAPTCHA verification failed
+          alert("reCAPTCHA verification failed. Please try again.");
+        }
+      } catch (error) {
+        console.log(error);
+        alert("Error submitting form. Please try again.");
+      }
+    // try {
+    //   const url = `/api/contact`;
+    //   const { name, email, number, subject, text } = contact;
+    //   const payload = { name, email, number, subject, text };
+    //   const response = await axios.post(url, payload, {
+    //     headers: {
+    //       "Content-Type": "application/json",
+    //       "Access-Control-Allow-Origin": "*",
+    //     },
+    //   });
+    //   console.log(response);
+    //   setContact(INITIAL_STATE);
+    //   alertContent();
+    // } catch (error) {
+    //   console.log(error);
+    // }
   };
 
   return (

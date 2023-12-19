@@ -14,7 +14,7 @@ export default async (req, res) => {
   const { name, email, number, subject, text } = req.body;
 
   const data = {
-    to: "info@melsoft.com.au",
+    to: "argineh@melsoft.com.au",
     from: "info@melsoft.com.au",
     subject: "Melsoft Equiry",
     text: text,
