@@ -41,7 +41,12 @@ const ContactForm = () => {
       const url = `${baseUrl}/api/contact`;
       const { name, email, number, subject, text } = contact;
       const payload = { name, email, number, subject, text };
-      const response = await axios.post(url, payload);
+      const response = await axios.post(url, payload, {
+        headers: {
+          'Content-Type': 'application/json',
+          'Access-Control-Allow-Origin': '*',
+        },
+      });
       console.log(response);
       setContact(INITIAL_STATE);
       alertContent();
