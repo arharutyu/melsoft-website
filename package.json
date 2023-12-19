@@ -31,5 +31,8 @@
         "sweetalert2-react-content": "^5.0.0",
         "swiper": "^8.3.2"
     },
-    "license": "MIT"
+    "license": "MIT",
+    "devDependencies": {
+        "next-unused": "^0.0.6"
+    }
 }
