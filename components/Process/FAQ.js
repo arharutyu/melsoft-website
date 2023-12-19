@@ -12,7 +12,7 @@ const FAQ = () => {
   const questions = [
     {
       Q: "How do I get started with your web development services?",
-      A: "Getting started is easy! Simply reach out to us through our contact form, email, or phone. We'll schedule a discovery meeting to discuss your requirements and objectives.",
+      A: "Getting started is easy! Simply reach out to us through our contact form, or email. We'll schedule a discovery meeting to discuss your requirements and objectives.",
     },
     {
       Q: "What information do I need to provide during the discovery phase?",
