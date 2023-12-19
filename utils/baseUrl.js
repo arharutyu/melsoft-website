@@ -1,5 +1,5 @@
 const baseUrl = process.env.NODE_ENV === "production" 
-? 'https://startp-react.envytheme.com' 
+? 'https://melsoft.com.au' 
 : 'http://localhost:3000';
 
 export default baseUrl;
