@@ -16,9 +16,9 @@ export default async (req, res) => {
 
   const data = {
     // Update your email here
-    to: "exampleyourdomain@gmail.com",
+    to: "info@melsoft.com.au",
     from: email,
-    subject: "Hi there",
+    subject: "Melsoft Equiry",
     text: text,
     html: `
         <b>From:</b> ${name} <br /> 
@@ -30,7 +30,7 @@ export default async (req, res) => {
   try {
     const response = await mailer.sendMail(data);
     console.log(response);
-    res.status(200).send("Email send successfully");
+    res.status(200).send("Email sent successfully");
   } catch (error) {
     console.log(error);
     res.status(500).send("Error proccessing charge");
