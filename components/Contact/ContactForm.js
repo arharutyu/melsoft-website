@@ -63,7 +63,7 @@ const ContactForm = () => {
     
           console.log(response);
           setContact(INITIAL_STATE);
-          alert("Form submitted successfully!");
+          alertContent();
         } else {
           // reCAPTCHA verification failed
           alert("reCAPTCHA verification failed. Please try again.");
@@ -72,22 +72,6 @@ const ContactForm = () => {
         console.log(error);
         alert("Error submitting form. Please try again.");
       }
-    // try {
-    //   const url = `/api/contact`;
-    //   const { name, email, number, subject, text } = contact;
-    //   const payload = { name, email, number, subject, text };
-    //   const response = await axios.post(url, payload, {
-    //     headers: {
-    //       "Content-Type": "application/json",
-    //       "Access-Control-Allow-Origin": "*",
-    //     },
-    //   });
-    //   console.log(response);
-    //   setContact(INITIAL_STATE);
-    //   alertContent();
-    // } catch (error) {
-    //   console.log(error);
-    // }
   };
 
   return (
