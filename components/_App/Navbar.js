@@ -8,8 +8,10 @@ const Navbar = () => {
   const router = useRouter();
 
   useEffect(() => {
-    setCurrentPath(router.asPath);
-  }, [router]);
+    setCurrentPath(router.pathname);
+    console.log("router.pathname", router.pathname);
+    console.log("currentPath", currentPath);
+  }, [router.pathname]);
 
   const [menu, setMenu] = React.useState(true);
 
