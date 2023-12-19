@@ -158,6 +158,11 @@ textarea.form-control {
   max-width: 80px;
   padding: 10px;
   margin-top: 40px;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
+}
+.small-logo:hover {
+  filter: grayscale(0%);
 }
 
 /* btn btn-primary */

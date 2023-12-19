@@ -209,6 +209,12 @@ textarea.form-control {
     max-width: 80px;
     padding: 10px;
     margin-top: 40px;
+    filter: grayscale(100%); // Set greyscale by default
+    transition: filter 0.3s; // Add a smooth transition for the effect
+  
+    &:hover {
+      filter: grayscale(0%); // Set to 0% greyscale on hover (show color)
+    }
 }
 
 /* btn btn-primary */
