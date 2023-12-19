@@ -6,6 +6,9 @@ module.exports = {
     },
     trailingSlash: true,
     optimizeFonts: false,
+    features: {
+        serverComponents: true,
+      },
     i18n: {
         locales: ['en', 'ar'],
         defaultLocale: 'en',
