@@ -1,32 +1,16 @@
 /*
-@File: StartP Template Styles
-
-* This file contains the styling for the actual template, this
-is the file you need to edit to change the look of the
-template.
-
-This files table contents are outlined below>>>>>
-
-*******************************************
-*******************************************
-
-==== INDEX PAGE CSS
 
 ** - Default CSS
-** - Preloader CSS
+** - Our Process CSS
 ** - Navbar CSS
 ** - Main Banner CSS
 ** - Boxes CSS
-** - About CSS
-** - Why Choose Us CSS
 ** - Services CSS
 ** - Services Details CSS
 ** - Features CSS
-** - Features Details CSS
+** - Portfolio CSS
 ** - Ready To Talk CSS
 ** - Page Title CSS
-** - FAQ CSS
-** - Pagination CSS
 ** - Contact CSS
 ** - Coming Soon CSS
 ** - 404 Error CSS
@@ -141,17 +125,15 @@ textarea.form-control {
   height: auto;
 }
 
-.swiper-pagination {
-  position: initial;
+.small-logo {
+  max-width: 80px;
+  padding: 10px;
+  margin-top: 40px;
+  filter: grayscale(100%);
+  transition: filter 0.3s;
 }
-.swiper-pagination .swiper-pagination-bullet {
-  background-color: #d6d6d6;
-  opacity: 1;
-  width: 12px;
-  height: 12px;
-}
-.swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active, .swiper-pagination .swiper-pagination-bullet:hover {
-  background-color: #416286;
+.small-logo:hover {
+  filter: grayscale(0%);
 }
 
 /* btn btn-primary */
@@ -222,39 +204,71 @@ textarea.form-control {
   width: 50%;
 }
 
-/* btn-secondary */
-.btn.btn-secondary {
-  text-transform: capitalize;
-  border-radius: 0;
-  background-color: #C2C1BB;
-  padding: 13px 30px;
-  box-shadow: 5px 5px 5px #504f49;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  font-size: 14px;
-  font-weight: 500;
+.btn-secondary {
+  color: #ffffff;
+  background-color: #78776d;
+  box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
 }
-.btn.btn-secondary::before {
-  border-radius: 0;
-  background: #C2C1BB;
+.btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
+  color: #ffffff;
+  background: #253A59;
+  transform: translateY(-5px);
+  box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 }
-.btn.btn-secondary::after {
-  border-radius: 0;
-  background: #C2C1BB;
+.btn-secondary.focus, .btn-secondary:focus {
+  box-shadow: unset;
 }
-.btn.btn-secondary:not(:disabled):not(.disabled).active, .btn.btn-secondary:not(:disabled):not(.disabled):active, .show > .btn.btn-secondary.dropdown-toggle {
+.btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary .show > .btn-secondary.dropdown-toggle:focus {
+  box-shadow: unset;
+}
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary .show > .btn-secondary.dropdown-toggle {
+  color: #ffffff;
+  background: #253A59;
+  transform: translateY(-5px);
+  box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
+}
+.btn-secondary.disabled, .btn-secondary:disabled {
   color: #ffffff;
   background-color: #416286;
-  border-color: #416286;
+  box-shadow: 0 13px 27px 0 rgba(68, 206, 111, 0.25);
+  opacity: 1;
 }
-.btn.btn-secondary:not(:disabled):not(.disabled).active:focus, .btn.btn-secondary:not(:disabled):not(.disabled):active:focus, .show > .btn.btn-secondary.dropdown-toggle:focus {
-  box-shadow: 5px 5px 5px #81a1c2;
+.btn-secondary.disabled:hover, .btn-secondary.disabled:focus, .btn-secondary:disabled:hover, .btn-secondary:disabled:focus {
+  background: #253A59;
+  box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 }
-.btn.btn-secondary:focus {
-  color: #ffffff;
+
+.btn {
+  font-weight: 600;
+  font-size: 14px;
+  border: none;
+  padding: 15px 40px;
+  position: relative;
+  border-radius: 4px;
+  z-index: 1;
+  text-transform: uppercase;
+  transition: 0.5s;
 }
-.btn.btn-secondary:hover, .btn.btn-secondary:focus {
-  box-shadow: 5px 5px 5px #81a1c2;
+.btn::after, .btn::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 0;
+  transition: 0.5s;
+  background: #C2C1BB;
+  z-index: -1;
+}
+.btn::after {
+  left: 0;
+  border-radius: 4px 0 0 4px;
+}
+.btn::before {
+  right: 0;
+  border-radius: 0 4px 4px 0;
+}
+.btn:hover::after, .btn:hover::before {
+  width: 50%;
 }
 
 /* Form control */
@@ -367,42 +381,79 @@ label {
 }
 
 /*================================================ 
-Preloader CSS
+Our Process CSS
 =================================================*/
-.preloader {
-  position: fixed;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 9999999;
-  background: #416286;
-}
-.preloader .spinner {
-  width: 60px;
-  height: 60px;
-  background-color: #ffffff;
-  margin: 0 auto;
-  animation: sk-rotateplane 1.2s infinite ease-in-out;
-  position: absolute;
-  right: 0;
-  left: 0;
-  box-shadow: 0 0 70px 0 rgba(0, 0, 0, 0.4);
-  top: 50%;
-  margin-top: -75px;
+.timeline {
+  min-width: 300px;
+  max-width: 600px;
+  margin: auto;
 }
 
-@keyframes sk-rotateplane {
-  0% {
-    transform: perspective(120px) rotateX(0deg) rotateY(0deg);
-  }
-  50% {
-    transform: perspective(120px) rotateX(-180.1deg) rotateY(0deg);
-  }
-  100% {
-    transform: perspective(120px) rotateX(-180deg) rotateY(-179.9deg);
-  }
+.timeline > div {
+  font-size: 1em;
+  line-height: 1.75em;
+  border-top: 3px solid;
+  -o-border-image: linear-gradient(to right bottom, #1fa2ff, #00c0ff, #00d9f2, #53eedd, #a6ffcb);
+     border-image: linear-gradient(to right bottom, #1fa2ff, #00c0ff, #00d9f2, #53eedd, #a6ffcb);
+  border-image-slice: 1;
+  border-width: 3px;
+  margin: 0;
+  padding: 40px;
+  counter-increment: section;
+  position: relative;
+  color: black;
 }
+
+/* numbers */
+.timeline > div::before {
+  content: counter(section);
+  position: absolute;
+  border-radius: 50%;
+  padding: 10px;
+  height: 2em;
+  width: 2em;
+  background-color: black;
+  text-align: center;
+  line-height: 1em;
+  color: white;
+  font-size: 1.25em;
+}
+
+/* odd number borders */
+.timeline > div:nth-child(odd) {
+  border-right: 3px solid;
+  padding-left: 0;
+  text-align: right;
+}
+
+.timeline > div:nth-child(odd)::before {
+  left: 100%;
+  margin-left: -20px;
+}
+
+/* even number borders */
+.timeline > div:nth-child(even) {
+  border-left: 3px solid;
+  padding-right: 0;
+}
+
+.timeline > div:nth-child(even)::before {
+  right: 100%;
+  margin-right: -20px;
+}
+
+/* handle first and last */
+.timeline > div:first-child {
+  border-top: 0;
+  border-top-right-radius: 0;
+  border-top-left-radius: 0;
+}
+
+.timeline > div:last-child {
+  border-bottom-right-radius: 0;
+  border-bottom-left-radius: 0;
+}
+
 /*================================================
 Navbar CSS
 =================================================*/
@@ -1121,77 +1172,6 @@ h3 {
   top: 0;
 }
 
-.single-services-box {
-  position: relative;
-  background: #ffffff;
-  padding-left: 25px;
-  padding-top: 30px;
-  padding-right: 25px;
-  padding-bottom: 30px;
-  margin-bottom: 30px;
-  border-radius: 5px;
-  transition: 0.5s;
-}
-.single-services-box h3 {
-  font-size: 18px;
-  margin-top: 25px;
-  margin-bottom: 15px;
-}
-.single-services-box .icon {
-  text-align: center;
-  width: 55px;
-  height: 55px;
-  line-height: 55px;
-  background: #cdf1d8;
-  border-radius: 50%;
-  color: #416286;
-  transition: 0.5s;
-}
-.single-services-box .icon.bg-c679e3 {
-  color: #C2C1BB;
-  background: #edc3fc;
-}
-.single-services-box .icon.bg-eb6b3d {
-  color: #eb6b3d;
-  background: rgba(235, 107, 61, 0.3);
-}
-.single-services-box::before, .single-services-box::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 4px;
-  background: #416286;
-  opacity: 0;
-  visibility: hidden;
-  bottom: 0;
-  transition: 0.5s;
-}
-.single-services-box::before {
-  left: 0;
-}
-.single-services-box::after {
-  right: 0;
-}
-.single-services-box:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 2px 48px 0 rgba(0, 0, 0, 0.08);
-}
-.single-services-box:hover .icon {
-  background: #416286;
-  color: #ffffff;
-}
-.single-services-box:hover .icon.bg-c679e3 {
-  background: #C2C1BB;
-}
-.single-services-box:hover .icon.bg-eb6b3d {
-  background: #eb6b3d;
-}
-.single-services-box:hover::after, .single-services-box:hover::before {
-  opacity: 1;
-  visibility: visible;
-  width: 50%;
-}
-
 /*================================================
 Services Details CSS
 =================================================*/
@@ -1391,6 +1371,7 @@ Ready To Talk CSS
   background: #ffffff;
 }
 .ready-to-talk .btn-primary {
+  margin: 5px;
   background: #416286;
   box-shadow: 0 5px 20px 0 rgba(93, 131, 187, 0.25);
 }
@@ -1398,96 +1379,19 @@ Ready To Talk CSS
   color: #504f49;
   box-shadow: 0 5px 20px 0 rgba(93, 131, 187, 0.25);
 }
+.ready-to-talk .btn-secondary {
+  margin: 5px;
+  background: #78776d;
+  box-shadow: 0 5px 20px 0 rgba(93, 131, 187, 0.25);
+}
+.ready-to-talk .btn-secondary:hover, .ready-to-talk .btn-secondary:focus {
+  color: #504f49;
+  box-shadow: 0 5px 20px 0 rgba(93, 131, 187, 0.25);
+}
 .ready-to-talk span a {
   margin-left: 15px;
   color: #ffffff;
   text-decoration: underline;
-}
-
-/*================================================
-Works CSS
-=================================================*/
-.works-area {
-  position: relative;
-  z-index: 1;
-}
-
-.single-works {
-  position: relative;
-  margin-bottom: 30px;
-  overflow: hidden;
-}
-.single-works::before {
-  content: "";
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(to right bottom, #81a1c2, #cccccc);
-  transition: 0.5s;
-  opacity: 0;
-  visibility: hidden;
-}
-.single-works .icon {
-  position: absolute;
-  border-radius: 50%;
-  top: 0;
-  right: 25px;
-  background: #ffffff;
-  width: 45px;
-  text-align: center;
-  height: 45px;
-  line-height: 42px;
-  opacity: 0;
-  transition: 0.5s;
-  visibility: hidden;
-}
-.single-works .icon svg {
-  width: 19px;
-}
-.single-works .icon:hover {
-  background: #253A59;
-  color: #ffffff;
-}
-.single-works .works-content {
-  position: absolute;
-  bottom: -60px;
-  left: 0;
-  padding: 20px;
-  transition: 0.5s;
-  opacity: 0;
-  visibility: hidden;
-}
-.single-works .works-content h3 {
-  font-size: 18px;
-  margin-bottom: 15px;
-}
-.single-works .works-content h3 a {
-  color: #ffffff;
-}
-.single-works .works-content h3 a:hover {
-  text-decoration: underline;
-}
-.single-works .works-content p {
-  color: #ffffff;
-}
-.single-works:hover::before {
-  opacity: 0.9;
-  visibility: visible;
-  z-index: 1;
-}
-.single-works:hover .icon {
-  opacity: 1;
-  visibility: visible;
-  top: 25px;
-  z-index: 5;
-}
-.single-works:hover .works-content {
-  opacity: 1;
-  visibility: visible;
-  bottom: 0;
-  z-index: 5;
 }
 
 /*================================================
@@ -1566,11 +1470,6 @@ Contact CSS
 .contact-info-box:hover .icon {
   color: #ffffff;
   background: #416286;
-}
-
-#map {
-  height: 500px;
-  width: 100%;
 }
 
 .contact-form .invalid-feedback {
@@ -1783,115 +1682,6 @@ Footer CSS
 .footer-area {
   position: relative;
   z-index: 1;
-}
-
-.single-footer-widget .logo {
-  margin-bottom: 20px;
-}
-.single-footer-widget .logo a {
-  display: block;
-}
-.single-footer-widget h3 {
-  font-size: 18px;
-  margin-bottom: 30px;
-}
-.single-footer-widget ul {
-  padding: 0;
-  margin: 0;
-  list-style-type: none;
-}
-.single-footer-widget ul.list li {
-  margin-bottom: 10px;
-}
-.single-footer-widget ul.list li a {
-  color: #253A59;
-}
-.single-footer-widget ul.list li a:hover {
-  color: #416286;
-  padding-left: 7px;
-}
-.single-footer-widget ul.list li:last-child {
-  margin-bottom: 0;
-}
-.single-footer-widget ul.footer-contact-info {
-  margin-bottom: 20px;
-}
-.single-footer-widget ul.footer-contact-info li {
-  position: relative;
-  color: #253A59;
-  margin-bottom: 8px;
-  padding-left: 25px;
-}
-.single-footer-widget ul.footer-contact-info li svg {
-  position: absolute;
-  left: 0;
-  width: 15px;
-  height: auto;
-  top: 2px;
-}
-.single-footer-widget ul.footer-contact-info li:last-child {
-  margin-bottom: 0;
-}
-.single-footer-widget ul.footer-contact-info li a {
-  color: #253A59;
-}
-.single-footer-widget ul.footer-contact-info li a:hover {
-  color: #416286;
-}
-.single-footer-widget ul.social-links li {
-  display: inline-block;
-  margin-right: 8px;
-}
-.single-footer-widget ul.social-links li:last-child {
-  margin-right: 0;
-}
-.single-footer-widget ul.social-links li a {
-  width: 32px;
-  text-align: center;
-  line-height: 29px;
-  height: 32px;
-  border: 1px solid #416286;
-  border-radius: 50%;
-  color: #416286;
-}
-.single-footer-widget ul.social-links li a svg {
-  width: 15px;
-}
-.single-footer-widget ul.social-links li a.facebook {
-  border-color: #4267b2;
-  color: #4267b2;
-}
-.single-footer-widget ul.social-links li a.facebook:hover {
-  background: #4267b2;
-  color: #ffffff;
-}
-.single-footer-widget ul.social-links li a.twitter {
-  border-color: #38A1F3;
-  color: #38A1F3;
-}
-.single-footer-widget ul.social-links li a.twitter:hover {
-  background: #38A1F3;
-  color: #ffffff;
-}
-.single-footer-widget ul.social-links li a.linkedin {
-  border-color: #0077B5;
-  color: #0077B5;
-}
-.single-footer-widget ul.social-links li a.linkedin:hover {
-  background: #0077B5;
-  color: #ffffff;
-}
-.single-footer-widget ul.social-links li a.instagram {
-  border-color: #231F20;
-  color: #231F20;
-}
-.single-footer-widget ul.social-links li a.instagram:hover {
-  background: #231F20;
-  color: #ffffff;
-}
-.single-footer-widget ul.social-links li a:hover {
-  background: #416286;
-  color: #ffffff;
 }
 
 .copyright-area {
