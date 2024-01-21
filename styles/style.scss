@@ -2022,6 +2022,8 @@ PayPal CSS
   display: flex;
   flex-direction: column; // Arrange children vertically
   align-items: center; // Center children horizontally
+  max-width: 100vw;
+  padding: 1rem;
 }
 
 #paypal-form {
@@ -2048,6 +2050,8 @@ input {
 .buttons-container {
   display: inline;
   width: 400px;
+  max-width: 100vw;
+  padding: 1rem;
 }
 
 row {
