@@ -26,10 +26,6 @@ function PayPal() {
 
   return (
     <>
-      <div className="section-title">
-        <h2>Pay an Invoice</h2>
-        <div className="bar"></div>
-      </div>
       <div className="paypal-container">
         {!confirmed ? (
           <>

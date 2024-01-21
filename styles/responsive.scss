@@ -160,7 +160,6 @@ Width 0px - 575px
 
   .startp-nav {
     nav {
-      
       .navbar-collapse {
         max-height: 70vh;
         overflow-y: scroll;
@@ -197,7 +196,6 @@ Width 0px - 575px
             width: 95%;
             border: 1px solid $main-color;
             margin-bottom: 10px;
-            
 
             li {
               a {
@@ -505,13 +503,20 @@ Width 0px - 575px
   .contact-form {
     margin-top: 45px;
   }
+  
+  #paypal-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100vw;
+  }
 }
-
+  
 /*================================================================================================================================================
 Width 576px - 767px
 =================================================================================================================================================*/
 @media only screen and (min-width: 576px) and (max-width: 767px) {
-/* Spacing */
+  /* Spacing */
   .startp-nav {
     nav {
       .others-option {
@@ -521,348 +526,70 @@ Width 576px - 767px
       }
     }
   }
-/* Common Components */
-/* Navbar */
-#header {
-  &.headroom {
-    background-color: $main-color;
-  }
-}
-#navbarSupportedContent {
-  background: $main-color;
-  padding-left: 10px;
-}
-
-.startp-nav {
-  nav {
-    
-    .navbar-collapse {
-      max-height: 70vh;
-      overflow-y: scroll;
-
-      &::-webkit-scrollbar {
-        width: 8px;
-      }
-      &::-webkit-scrollbar-track {
-        background: $secondary-color-300;
-      }
-      &::-webkit-scrollbar-thumb {
-        background: $secondary-color;
-        border-radius: 30px;
-      }
-      &::-webkit-scrollbar-thumb:hover {
-        background: $secondary-color-700;
-      }
+  /* Common Components */
+  /* Navbar */
+  #header {
+    &.headroom {
+      background-color: $main-color;
     }
-    .navbar-nav {
-      .nav-item {
-        padding: 5px 0;
-        > a {
-          margin: 0 0 5px;
-          svg {
-            display: none;
-          }
-        }
-        .dropdown-menu {
-          padding: 10px 0;
-          position: relative;
-          visibility: visible;
-          opacity: 1;
-          top: 0;
-          width: 95%;
-          border: 1px solid $main-color;
-          margin-bottom: 10px;
-          
+  }
+  #navbarSupportedContent {
+    background: $main-color;
+    padding-left: 10px;
+  }
 
-          li {
-            a {
-              padding: 6px 15px;
-            }
-            .dropdown-menu {
-              padding: 10px 0;
-              position: relative;
-              visibility: visible !important;
-              opacity: 1 !important;
-              left: 15px;
-              top: 0;
-              width: 90%;
-              border: 1px solid $main-color-400;
+  .startp-nav {
+    nav {
+      .navbar-collapse {
+        max-height: 70vh;
+        overflow-y: scroll;
+
+        &::-webkit-scrollbar {
+          width: 8px;
+        }
+        &::-webkit-scrollbar-track {
+          background: $secondary-color-300;
+        }
+        &::-webkit-scrollbar-thumb {
+          background: $secondary-color;
+          border-radius: 30px;
+        }
+        &::-webkit-scrollbar-thumb:hover {
+          background: $secondary-color-700;
+        }
+      }
+      .navbar-nav {
+        .nav-item {
+          padding: 5px 0;
+          > a {
+            margin: 0 0 5px;
+            svg {
+              display: none;
             }
           }
-        }
-      }
-    }
-  }
-}
-/* Footer */
+          .dropdown-menu {
+            padding: 10px 0;
+            position: relative;
+            visibility: visible;
+            opacity: 1;
+            top: 0;
+            width: 95%;
+            border: 1px solid $main-color;
+            margin-bottom: 10px;
 
-/*================================================Index=================================================*/
-.single-box {
-  margin-bottom: 30px;
-  // min-height: 450px;
-  width: 300px;
-}
-
-/*================================================Process=================================================*/
-/*================================================Portfolio=================================================*/
-/*================================================Contact=================================================*/
-}
-
-/*================================================================================================================================================
-Width 768px - 991px
-=================================================================================================================================================*/
-@media only screen and (min-width: 768px) and (max-width: 991px) {
-/* Spacing */
-/* Common Components */
-.shape1,
-.shape2,
-.shape3,
-.shape4,
-.shape5,
-.shape7 {
-  display: none;
-}
-.section-title {
-  h2 {
-    font-size: 25px;
-  }
-}
-.page-title-area {
-  padding: {
-    top: 130px;
-    bottom: 50px;
-  }
-  .shape8 {
-    top: auto;
-    right: auto;
-    left: 20px;
-    bottom: 20px;
-  }
-}
-
-.coming-soon-content {
-  h1 {
-    font-size: 35px;
-  }
-  p {
-    font-size: 15px;
-  }
-  #timer {
-    div {
-      padding-top: 20px;
-      font-size: 30px;
-
-      span {
-        font-size: 14px;
-      }
-    }
-  }
-}
-
-.error-content {
-  .notfound-404 {
-    height: 205px;
-
-    h1 {
-      font-size: 170px;
-    }
-  }
-}
-
-/* Navbar */
-#header {
-  &.headroom {
-    padding: 10px 0;
-    &.is-sticky {
-      padding-top: 10px;
-      padding-bottom: 10px;
-    }
-  }
-
-.startp-nav {
-  nav {
-    .navbar-nav {
-      .nav-item {
-        a {
-          font-size: 14px;
-          margin-left: 6px;
-          margin-right: 6px;
-        }
-        .dropdown-menu {
-          width: 200px;
-
-          li {
-            a {
-              padding: 6px 15px;
-              font-size: 13.5px;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-/* Footer */
-.copyright-area {
-  margin-top: 50px;
-}
-
-/*================================================Index=================================================*/
-.main-banner {
-  height: 30vh;
-  padding: {
-    top: 185px;
-    bottom: 1rem;
-  }
-
-  .hero-content {
-    max-width: 500px;
-    h1 {
-      font-size: 30px;
-      margin-bottom: 15px;
-    }
-  }
-}
-
-.boxes-area {
-  padding-bottom: 50px;
-  margin-top: 50px;
-  // display: inline-block;
-}
-.single-box {
-  margin-bottom: 30px;
-  // min-height: 450px;
-  // width: 30vw;
-}
-
-.single-features {
-  padding-left: 20px;
-  min-height: 290px;
-
-  .icon {
-    position: relative;
-    left: 0;
-    top: 0;
-    margin-bottom: 25px;
-  }
-}
-
-.services-details {
-  order: 2;
-}
-
-.services-details-image {
-  order: 1;
-  margin-bottom: 40px;
-}
-
-.services-details-area {
-  .separate {
-    margin-top: 40px;
-  }
-}
-
-.section-title {
-  &.text-left {
-    text-align: center !important;
-
-    p {
-      margin: {
-        left: auto;
-        right: auto;
-      }
-    }
-  }
-}
-}
-
-.services-right-image {
-  text-align: center;
-  margin-top: 45px;
-
-  img {
-    display: none;
-    position: relative;
-
-    &:last-child {
-      display: inline-block;
-    }
-  }
-  &.single-right-image {
-    img {
-      &.bg-image {
-        display: none;
-      }
-    }
-  }
-}
-.services-left-image {
-  text-align: center;
-  margin-bottom: 45px;
-
-  img {
-    display: none;
-    position: relative;
-
-    &:last-child {
-      display: inline-block;
-    }
-  }
-  &.single-left-image {
-    img {
-      &.bg-image {
-        display: none;
-      }
-    }
-  }
-}
-
-  /*================================================Process=================================================*/
-  /*================================================Portfolio=================================================*/
-  /*================================================Contact=================================================*/
-  .contact-info-area {
-    padding-bottom: 50px;
-  }
-  .contact-info-box {
-    margin-bottom: 30px;
-  }
-  .contact-form {
-    margin-top: 45px;
-  }
-}
-
-/*================================================================================================================================================
-Width 992px - 1199px
-=================================================================================================================================================*/
-@media only screen and (min-width: 992px) and (max-width: 1199px) {
-/*================================================Index=================================================*/
-  .main-banner {
-    height: 30vh;
-    padding: {
-      top: 185px;
-      bottom: 1rem;
-    }
-    margin-left: 0;
-    min-height: 300px;
-    .hero-content {
-      h1 {
-        font-size: 35px;
-      }
-      padding: 1rem;
-    }
-    .shape1 {
-      display: none;
-    }
-
-    .startp-nav {
-      nav {
-        .navbar-nav {
-          .nav-item {
-            a {
-              margin: {
-                left: 10px;
-                right: 10px;
+            li {
+              a {
+                padding: 6px 15px;
+              }
+              .dropdown-menu {
+                padding: 10px 0;
+                position: relative;
+                visibility: visible !important;
+                opacity: 1 !important;
+                left: 15px;
+                top: 0;
+                width: 90%;
+                border: 1px solid $main-color-400;
               }
             }
           }
@@ -870,32 +597,315 @@ Width 992px - 1199px
       }
     }
   }
-}
+  /* Footer */
 
-.single-features {
-  min-height: 220px;
-}
+  /*================================================Index=================================================*/
+  .single-box {
+    margin-bottom: 30px;
+    // min-height: 450px;
+    width: 300px;
+  }
 
-.single-box {
-  width: 30vw;
-  min-width: 280px;
-  min-height: 300px;
-  margin-bottom: 10px;
-}
+  /*================================================Process=================================================*/
+  /*================================================Portfolio=================================================*/
+  /*================================================Contact=================================================*/
+  #paypal-form {
+    width: 80vw;
+  }
 
-.services-content .row .col-lg-6 .box {
-  min-height: 230px;  
-}
+  input {
+    max-width: 300px;
+  }
 
-/*================================================Process=================================================*/
-/*================================================Portfolio=================================================*/
-/*================================================Contact=================================================*/
+  /*================================================================================================================================================
+Width 768px - 991px
+=================================================================================================================================================*/
+  @media only screen and (min-width: 768px) and (max-width: 991px) {
+    /* Spacing */
+    /* Common Components */
+    .shape1,
+    .shape2,
+    .shape3,
+    .shape4,
+    .shape5,
+    .shape7 {
+      display: none;
+    }
+    .section-title {
+      h2 {
+        font-size: 25px;
+      }
+    }
+    .page-title-area {
+      padding: {
+        top: 130px;
+        bottom: 50px;
+      }
+      .shape8 {
+        top: auto;
+        right: auto;
+        left: 20px;
+        bottom: 20px;
+      }
+    }
 
-/*================================================================================================================================================
+    .coming-soon-content {
+      h1 {
+        font-size: 35px;
+      }
+      p {
+        font-size: 15px;
+      }
+      #timer {
+        div {
+          padding-top: 20px;
+          font-size: 30px;
+
+          span {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+
+    .error-content {
+      .notfound-404 {
+        height: 205px;
+
+        h1 {
+          font-size: 170px;
+        }
+      }
+    }
+
+    /* Navbar */
+    #header {
+      &.headroom {
+        padding: 10px 0;
+        &.is-sticky {
+          padding-top: 10px;
+          padding-bottom: 10px;
+        }
+      }
+
+      .startp-nav {
+        nav {
+          .navbar-nav {
+            .nav-item {
+              a {
+                font-size: 14px;
+                margin-left: 6px;
+                margin-right: 6px;
+              }
+              .dropdown-menu {
+                width: 200px;
+
+                li {
+                  a {
+                    padding: 6px 15px;
+                    font-size: 13.5px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      /* Footer */
+      .copyright-area {
+        margin-top: 50px;
+      }
+
+      /*================================================Index=================================================*/
+      .main-banner {
+        height: 30vh;
+        padding: {
+          top: 185px;
+          bottom: 1rem;
+        }
+
+        .hero-content {
+          max-width: 500px;
+          h1 {
+            font-size: 30px;
+            margin-bottom: 15px;
+          }
+        }
+      }
+
+      .boxes-area {
+        padding-bottom: 50px;
+        margin-top: 50px;
+        // display: inline-block;
+      }
+      .single-box {
+        margin-bottom: 30px;
+        // min-height: 450px;
+        // width: 30vw;
+      }
+
+      .single-features {
+        padding-left: 20px;
+        min-height: 290px;
+
+        .icon {
+          position: relative;
+          left: 0;
+          top: 0;
+          margin-bottom: 25px;
+        }
+      }
+
+      .services-details {
+        order: 2;
+      }
+
+      .services-details-image {
+        order: 1;
+        margin-bottom: 40px;
+      }
+
+      .services-details-area {
+        .separate {
+          margin-top: 40px;
+        }
+      }
+
+      .section-title {
+        &.text-left {
+          text-align: center !important;
+
+          p {
+            margin: {
+              left: auto;
+              right: auto;
+            }
+          }
+        }
+      }
+    }
+
+    .services-right-image {
+      text-align: center;
+      margin-top: 45px;
+
+      img {
+        display: none;
+        position: relative;
+
+        &:last-child {
+          display: inline-block;
+        }
+      }
+      &.single-right-image {
+        img {
+          &.bg-image {
+            display: none;
+          }
+        }
+      }
+    }
+    .services-left-image {
+      text-align: center;
+      margin-bottom: 45px;
+
+      img {
+        display: none;
+        position: relative;
+
+        &:last-child {
+          display: inline-block;
+        }
+      }
+      &.single-left-image {
+        img {
+          &.bg-image {
+            display: none;
+          }
+        }
+      }
+    }
+
+    /*================================================Process=================================================*/
+    /*================================================Portfolio=================================================*/
+    /*================================================Contact=================================================*/
+    .contact-info-area {
+      padding-bottom: 50px;
+    }
+    .contact-info-box {
+      margin-bottom: 30px;
+    }
+    .contact-form {
+      margin-top: 45px;
+    }
+  }
+
+  /*================================================================================================================================================
+Width 992px - 1199px
+=================================================================================================================================================*/
+  @media only screen and (min-width: 992px) and (max-width: 1199px) {
+    /*================================================Index=================================================*/
+    .main-banner {
+      height: 30vh;
+      padding: {
+        top: 185px;
+        bottom: 1rem;
+      }
+      margin-left: 0;
+      min-height: 300px;
+      .hero-content {
+        h1 {
+          font-size: 35px;
+        }
+        padding: 1rem;
+      }
+      .shape1 {
+        display: none;
+      }
+
+      .startp-nav {
+        nav {
+          .navbar-nav {
+            .nav-item {
+              a {
+                margin: {
+                  left: 10px;
+                  right: 10px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .single-features {
+    min-height: 220px;
+  }
+
+  .single-box {
+    width: 30vw;
+    min-width: 280px;
+    min-height: 300px;
+    margin-bottom: 10px;
+  }
+
+  .services-content .row .col-lg-6 .box {
+    min-height: 230px;
+  }
+
+  /*================================================Process=================================================*/
+  /*================================================Portfolio=================================================*/
+  /*================================================Contact=================================================*/
+
+  /*================================================================================================================================================
 Min width 1200px
 =================================================================================================================================================*/
-@media only screen and (min-width: 1200px) {
-  .container {
-    max-width: 1250px;
+  @media only screen and (min-width: 1200px) {
+    .container {
+      max-width: 1250px;
+    }
   }
 }

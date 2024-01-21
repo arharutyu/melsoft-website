@@ -14,7 +14,7 @@ const Layout = ({ children }) => {
         <title>Melsoft</title>
       </Head>
       <Navbar />
-      <div>
+      <div className="content-container">
         {children}
       </div>
       <Footer />

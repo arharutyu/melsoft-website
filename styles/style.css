@@ -1754,7 +1754,7 @@ PayPal CSS
 ===============================*/
 .payment-container {
   margin-top: 10px;
-  height: 90vh;
+  height: 120vh;
 }
 
 .paypal-container {
@@ -1763,10 +1763,11 @@ PayPal CSS
   align-items: center;
 }
 
-form {
+#paypal-form {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 50vw;
 }
 
 label {
@@ -1781,6 +1782,20 @@ input {
   padding: 5px;
   margin-bottom: 10px;
   margin-left: 5px;
+}
+
+.buttons-container {
+  display: inline;
+  width: 400px;
+}
+
+row {
+  display: flex;
+}
+
+cell {
+  /* Set the height of the cell as needed */
+  height: 1000px; /* Adjust the value accordingly */
 }
 
 @media (min-width: 480px) {

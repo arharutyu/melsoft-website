@@ -27,6 +27,7 @@ function PayPalComponent({ invoiceId, amount }) {
   return (
     <>
       <div className="buttons-container">
+
         <PayPalScriptProvider
           options={{
             "client-id":
@@ -41,7 +42,7 @@ function PayPalComponent({ invoiceId, amount }) {
               color: "gold",
               shape: "rect",
               label: "paypal",
-              height: 40,
+              height: 55,
             }}
           />
         </PayPalScriptProvider>

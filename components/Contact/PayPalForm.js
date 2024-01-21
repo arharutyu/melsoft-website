@@ -16,7 +16,7 @@ function PayPalForm({ invoiceId, amount, onInputChange, onConfirm }) {
   };
 
   return (
-    <form>
+    <form id="paypal-form">
       <label>
         Invoice Number:
         <input

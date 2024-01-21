@@ -92,6 +92,7 @@ body {
   padding: 0;
   margin: 0;
   font-size: $font-size;
+  
 }
 :root {
   scroll-behavior: inherit;
@@ -2013,8 +2014,8 @@ Go Top CSS
 PayPal CSS
 ===============================*/
 .payment-container {
-    margin-top: 10px;
-    height: 90vh;
+  margin-top: 10px;
+  height: 120vh;
 }
 
 .paypal-container {
@@ -2023,33 +2024,47 @@ PayPal CSS
   align-items: center; // Center children horizontally
 }
 
-form {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-  }
-  
+#paypal-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 50vw;
+}
+
+label {
+  width: 100%; // Make all labels take the full width
+  text-align: right; // Align text to the right for a cleaner look
+  margin-bottom: 5px; // Add some space between labels
+}
+
+input {
+  width: 100%; // Make all input fields take the full width
+  box-sizing: border-box; // Include padding and border in the width
+  padding: 5px; // Add some padding for better appearance
+  margin-bottom: 10px; // Add some space between input fields
+  margin-left: 5px;
+}
+
+.buttons-container {
+  display: inline;
+  width: 400px;
+}
+
+row {
+  display: flex;
+}
+
+cell {
+  /* Set the height of the cell as needed */
+  height: 1000px; /* Adjust the value accordingly */
+}
+
+@media (min-width: 480px) {
   label {
-    width: 100%; // Make all labels take the full width
-    text-align: right; // Align text to the right for a cleaner look
-    margin-bottom: 5px; // Add some space between labels
+    width: 70%;
   }
-  
+
   input {
-    width: 100%; // Make all input fields take the full width
-    box-sizing: border-box; // Include padding and border in the width
-    padding: 5px; // Add some padding for better appearance
-    margin-bottom: 10px; // Add some space between input fields
-    margin-left: 5px;
+    width: 50%;
   }
-  
-  @media (min-width: 480px) {
-    label {
-      width: 70%; 
-    }
-  
-    input {
-      width: 50%;
-    }
-  }
-  
+}
