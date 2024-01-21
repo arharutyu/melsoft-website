@@ -79,6 +79,10 @@ Width 0px - 575px
   #header.headroom {
     background-color: #416286;
   }
+  #navbarSupportedContent {
+    background: #416286;
+    padding-left: 10px;
+  }
   .startp-nav nav .navbar-collapse {
     max-height: 70vh;
     overflow-y: scroll;
@@ -354,6 +358,62 @@ Width 576px - 767px
   }
   /* Common Components */
   /* Navbar */
+  #header.headroom {
+    background-color: #416286;
+  }
+  #navbarSupportedContent {
+    background: #416286;
+    padding-left: 10px;
+  }
+  .startp-nav nav .navbar-collapse {
+    max-height: 70vh;
+    overflow-y: scroll;
+  }
+  .startp-nav nav .navbar-collapse::-webkit-scrollbar {
+    width: 8px;
+  }
+  .startp-nav nav .navbar-collapse::-webkit-scrollbar-track {
+    background: #78776d;
+  }
+  .startp-nav nav .navbar-collapse::-webkit-scrollbar-thumb {
+    background: #c2c1bb;
+    border-radius: 30px;
+  }
+  .startp-nav nav .navbar-collapse::-webkit-scrollbar-thumb:hover {
+    background: #dbdad7;
+  }
+  .startp-nav nav .navbar-nav .nav-item {
+    padding: 5px 0;
+  }
+  .startp-nav nav .navbar-nav .nav-item > a {
+    margin: 0 0 5px;
+  }
+  .startp-nav nav .navbar-nav .nav-item > a svg {
+    display: none;
+  }
+  .startp-nav nav .navbar-nav .nav-item .dropdown-menu {
+    padding: 10px 0;
+    position: relative;
+    visibility: visible;
+    opacity: 1;
+    top: 0;
+    width: 95%;
+    border: 1px solid #416286;
+    margin-bottom: 10px;
+  }
+  .startp-nav nav .navbar-nav .nav-item .dropdown-menu li a {
+    padding: 6px 15px;
+  }
+  .startp-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu {
+    padding: 10px 0;
+    position: relative;
+    visibility: visible !important;
+    opacity: 1 !important;
+    left: 15px;
+    top: 0;
+    width: 90%;
+    border: 1px solid #344f6b;
+  }
   /* Footer */
   /*================================================Index=================================================*/
   .single-box {

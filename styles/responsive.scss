@@ -153,8 +153,14 @@ Width 0px - 575px
       background-color: $main-color;
     }
   }
+  #navbarSupportedContent {
+    background: $main-color;
+    padding-left: 10px;
+  }
+
   .startp-nav {
     nav {
+      
       .navbar-collapse {
         max-height: 70vh;
         overflow-y: scroll;
@@ -191,6 +197,7 @@ Width 0px - 575px
             width: 95%;
             border: 1px solid $main-color;
             margin-bottom: 10px;
+            
 
             li {
               a {
@@ -516,6 +523,77 @@ Width 576px - 767px
   }
 /* Common Components */
 /* Navbar */
+#header {
+  &.headroom {
+    background-color: $main-color;
+  }
+}
+#navbarSupportedContent {
+  background: $main-color;
+  padding-left: 10px;
+}
+
+.startp-nav {
+  nav {
+    
+    .navbar-collapse {
+      max-height: 70vh;
+      overflow-y: scroll;
+
+      &::-webkit-scrollbar {
+        width: 8px;
+      }
+      &::-webkit-scrollbar-track {
+        background: $secondary-color-300;
+      }
+      &::-webkit-scrollbar-thumb {
+        background: $secondary-color;
+        border-radius: 30px;
+      }
+      &::-webkit-scrollbar-thumb:hover {
+        background: $secondary-color-700;
+      }
+    }
+    .navbar-nav {
+      .nav-item {
+        padding: 5px 0;
+        > a {
+          margin: 0 0 5px;
+          svg {
+            display: none;
+          }
+        }
+        .dropdown-menu {
+          padding: 10px 0;
+          position: relative;
+          visibility: visible;
+          opacity: 1;
+          top: 0;
+          width: 95%;
+          border: 1px solid $main-color;
+          margin-bottom: 10px;
+          
+
+          li {
+            a {
+              padding: 6px 15px;
+            }
+            .dropdown-menu {
+              padding: 10px 0;
+              position: relative;
+              visibility: visible !important;
+              opacity: 1 !important;
+              left: 15px;
+              top: 0;
+              width: 90%;
+              border: 1px solid $main-color-400;
+            }
+          }
+        }
+      }
+    }
+  }
+}
 /* Footer */
 
 /*================================================Index=================================================*/

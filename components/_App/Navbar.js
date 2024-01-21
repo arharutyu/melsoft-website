@@ -32,7 +32,7 @@ const Navbar = () => {
     : "collapse navbar-collapse show";
   const classTwo = menu
     ? "navbar-toggler navbar-toggler-right collapsed"
-    : "navbar-toggler navbar-toggler-right";
+    : "navbar-toggler navbar-toggler-right show";
 
   return (
     <>
