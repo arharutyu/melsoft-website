@@ -16,7 +16,8 @@
 ** - 404 Error CSS
 ** - Footer CSS
 ** - Go Top CSS
-*/
+** - PayPal CSS
+
 /*================================================
 Default CSS
 =================================================*/
@@ -56,14 +57,25 @@ a:hover, a:focus {
 }
 
 p {
-  color: #253A59;
+  color: #253a59;
   line-height: 1.8;
 }
 p:last-child {
   margin-bottom: 0;
 }
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+.h1,
+.h2,
+.h3,
+.h4,
+.h5,
+.h6,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-weight: 500;
 }
 
@@ -105,7 +117,7 @@ p:last-child {
 }
 
 .bg-0f054b {
-  background-color: #C2C1BB;
+  background-color: #c2c1bb;
 }
 
 .bg-eef6fd {
@@ -144,19 +156,21 @@ textarea.form-control {
 }
 .btn-primary:hover, .btn-primary:focus, .btn-primary:active {
   color: #ffffff;
-  background: #253A59;
+  background: #253a59;
   transform: translateY(-5px);
   box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 }
 .btn-primary.focus, .btn-primary:focus {
   box-shadow: unset;
 }
-.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus, .btn-primary .show > .btn-primary.dropdown-toggle:focus {
+.btn-primary:not(:disabled):not(.disabled).active:focus, .btn-primary:not(:disabled):not(.disabled):active:focus,
+.btn-primary .show > .btn-primary.dropdown-toggle:focus {
   box-shadow: unset;
 }
-.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active, .btn-primary .show > .btn-primary.dropdown-toggle {
+.btn-primary:not(:disabled):not(.disabled).active, .btn-primary:not(:disabled):not(.disabled):active,
+.btn-primary .show > .btn-primary.dropdown-toggle {
   color: #ffffff;
-  background: #253A59;
+  background: #253a59;
   transform: translateY(-5px);
   box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 }
@@ -167,7 +181,7 @@ textarea.form-control {
   opacity: 1;
 }
 .btn-primary.disabled:hover, .btn-primary.disabled:focus, .btn-primary:disabled:hover, .btn-primary:disabled:focus {
-  background: #253A59;
+  background: #253a59;
   box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 }
 
@@ -189,7 +203,7 @@ textarea.form-control {
   height: 100%;
   width: 0;
   transition: 0.5s;
-  background: #C2C1BB;
+  background: #c2c1bb;
   z-index: -1;
 }
 .btn::after {
@@ -211,19 +225,21 @@ textarea.form-control {
 }
 .btn-secondary:hover, .btn-secondary:focus, .btn-secondary:active {
   color: #ffffff;
-  background: #253A59;
+  background: #253a59;
   transform: translateY(-5px);
   box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 }
 .btn-secondary.focus, .btn-secondary:focus {
   box-shadow: unset;
 }
-.btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus, .btn-secondary .show > .btn-secondary.dropdown-toggle:focus {
+.btn-secondary:not(:disabled):not(.disabled).active:focus, .btn-secondary:not(:disabled):not(.disabled):active:focus,
+.btn-secondary .show > .btn-secondary.dropdown-toggle:focus {
   box-shadow: unset;
 }
-.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active, .btn-secondary .show > .btn-secondary.dropdown-toggle {
+.btn-secondary:not(:disabled):not(.disabled).active, .btn-secondary:not(:disabled):not(.disabled):active,
+.btn-secondary .show > .btn-secondary.dropdown-toggle {
   color: #ffffff;
-  background: #253A59;
+  background: #253a59;
   transform: translateY(-5px);
   box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 }
@@ -234,7 +250,7 @@ textarea.form-control {
   opacity: 1;
 }
 .btn-secondary.disabled:hover, .btn-secondary.disabled:focus, .btn-secondary:disabled:hover, .btn-secondary:disabled:focus {
-  background: #253A59;
+  background: #253a59;
   box-shadow: 0 13px 27px 0 rgba(198, 121, 227, 0.25);
 }
 
@@ -256,7 +272,7 @@ textarea.form-control {
   height: 100%;
   width: 0;
   transition: 0.5s;
-  background: #C2C1BB;
+  background: #c2c1bb;
   z-index: -1;
 }
 .btn::after {
@@ -277,7 +293,7 @@ textarea.form-control {
 }
 
 label {
-  color: #253A59;
+  color: #253a59;
   font-size: 15px;
   font-weight: 500;
   margin-bottom: 10px;
@@ -287,7 +303,7 @@ label {
   height: 45px;
   padding: 10px 15px;
   font-size: 14px;
-  color: #253A59;
+  color: #253a59;
   border: 1px solid #eeeeee;
   border-radius: 0;
   background: #eeeeee;
@@ -339,7 +355,7 @@ label {
 }
 .section-title .sub-title {
   display: inline-block;
-  color: #C2C1BB;
+  color: #c2c1bb;
   background-color: #cccccc;
   margin-bottom: 18px;
   border-radius: 30px;
@@ -553,7 +569,8 @@ Navbar CSS
 .startp-nav nav .navbar-nav .nav-item .dropdown-menu li a:hover, .startp-nav nav .navbar-nav .nav-item .dropdown-menu li a:focus, .startp-nav nav .navbar-nav .nav-item .dropdown-menu li a.active {
   color: #416286;
 }
-.startp-nav nav .navbar-nav .nav-item .dropdown-menu li a svg, .startp-nav nav .navbar-nav .nav-item .dropdown-menu li a i {
+.startp-nav nav .navbar-nav .nav-item .dropdown-menu li a svg,
+.startp-nav nav .navbar-nav .nav-item .dropdown-menu li a i {
   float: right;
 }
 .startp-nav nav .navbar-nav .nav-item .dropdown-menu li .dropdown-menu {
@@ -842,7 +859,7 @@ Boxes CSS
   line-height: 55px;
   background: #81a1c2;
   border-radius: 50%;
-  color: #C2C1BB;
+  color: #c2c1bb;
   transition: 0.5s;
 }
 .single-box h3 {
@@ -875,7 +892,7 @@ Boxes CSS
   border-color: #edc3fc;
 }
 .single-box.bg-c679e3 .icon {
-  color: #C2C1BB;
+  color: #c2c1bb;
   background: #edc3fc;
 }
 .single-box.bg-eb6b3d {
@@ -895,13 +912,15 @@ Boxes CSS
 }
 .single-box:hover .icon {
   color: #5781ae;
-  background: #C2C1BB;
+  background: #c2c1bb;
 }
-.single-box:hover h3, .single-box:hover p, .single-box:hover a {
+.single-box:hover h3,
+.single-box:hover p,
+.single-box:hover a {
   color: #ffffff;
 }
 .single-box:hover.bg-c679e3 .icon {
-  color: #C2C1BB;
+  color: #c2c1bb;
 }
 .single-box:hover.bg-eb6b3d .icon {
   color: #eb6b3d;
@@ -970,7 +989,7 @@ h3 {
   z-index: 1;
   display: block;
   padding: 1rem;
-  color: #253A59;
+  color: #253a59;
   font-weight: 300;
   border-radius: 5px;
   background-color: #ffffff;
@@ -1201,7 +1220,7 @@ Services Details CSS
   display: block;
   padding: 15px 20px;
   text-decoration: none;
-  color: #253A59;
+  color: #253a59;
   position: relative;
   background-color: #fff;
   font-size: 15px;
@@ -1278,7 +1297,7 @@ Features CSS
 }
 .single-features .icon.bg-c679e3 {
   color: #ffffff;
-  background: #C2C1BB;
+  background: #c2c1bb;
 }
 .single-features .icon.bg-eb6b3d {
   color: #ffffff;
@@ -1463,7 +1482,7 @@ Contact CSS
   margin-bottom: 0;
 }
 .contact-info-box p a {
-  color: #253A59;
+  color: #253a59;
 }
 .contact-info-box p a:hover {
   color: #416286;
@@ -1598,7 +1617,7 @@ Coming Soon CSS
   padding: 15px 25px;
   font-size: 16px;
   outline: 0 !important;
-  background: #F1F2F3;
+  background: #f1f2f3;
 }
 .coming-soon-content form .submit-btn {
   position: absolute;
@@ -1618,7 +1637,7 @@ Coming Soon CSS
   font-weight: 500;
 }
 .coming-soon-content form .submit-btn:hover, .coming-soon-content form .submit-btn:focus {
-  background-color: #C2C1BB;
+  background-color: #c2c1bb;
 }
 .coming-soon-content #timer div {
   background: #ffffff;
@@ -1626,7 +1645,7 @@ Coming Soon CSS
   border-radius: 50%;
   width: 110px;
   height: 110px;
-  color: #C2C1BB;
+  color: #c2c1bb;
   box-shadow: 0px 0px 0px 5px rgba(255, 255, 255, 0.5);
   margin: 0 10px;
   padding-top: 18px;
@@ -1636,7 +1655,7 @@ Coming Soon CSS
 .coming-soon-content #timer div span {
   display: block;
   margin-top: -4px;
-  color: #253A59;
+  color: #253a59;
   font-size: 15px;
 }
 
@@ -1715,12 +1734,60 @@ Go Top CSS
 }
 .go-top:hover {
   color: #ffffff;
-  background: #C2C1BB;
+  background: #c2c1bb;
 }
 .go-top.active {
   right: 0;
 }
 
-.main-text-area h1, .main-text-area h2, .main-text-area h3, .main-text-area h4, .main-text-area h5, .main-text-area h6 {
+.main-text-area h1,
+.main-text-area h2,
+.main-text-area h3,
+.main-text-area h4,
+.main-text-area h5,
+.main-text-area h6 {
   margin-bottom: 15px;
+}
+
+/*=============================
+PayPal CSS
+===============================*/
+.payment-container {
+  margin-top: 10px;
+  height: 90vh;
+}
+
+.paypal-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+label {
+  width: 100%;
+  text-align: right;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 5px;
+  margin-bottom: 10px;
+  margin-left: 5px;
+}
+
+@media (min-width: 480px) {
+  label {
+    width: 70%;
+  }
+  input {
+    width: 50%;
+  }
 }/*# sourceMappingURL=style.css.map */
