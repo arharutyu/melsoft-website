@@ -104,6 +104,32 @@ const Navbar = () => {
                     >
                       Contact
                     </Link>
+                    <ul className="dropdown-menu">
+                      <li className="nav-item">
+                        <Link
+                          href="/contact/"
+                          onClick={toggleNavbar}
+                          className={`nav-link ${
+                            currentPath == "/contact/" && "active"
+                          }`}
+                        >
+                          Contact
+                        </Link>
+                      </li>
+
+                      <li className="nav-item">
+                        <Link
+                          href="/payment/"
+                          onClick={toggleNavbar}
+                          className={`nav-link ${
+                            currentPath == "/contact/" && "active"
+                          }`}
+                        >
+                          Make a Payment
+                        </Link>
+                      </li>
+
+                    </ul>
                   </li>
                 </ul>
               </div>
